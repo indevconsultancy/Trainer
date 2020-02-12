@@ -1,0 +1,45 @@
+ @media screen and (min-width: 320px) and (max-width: 359px) {
+	
+.btn-main {
+padding: 9px 11px;
+}
+
+
+
+.top-body-block h2 {
+    font-size: 14px;
+}
+
+.top-body-block h1 {
+font-size: 16px;
+}
+
+.bg-field span {
+    height: 40px;
+    line-height: 40px;
+}
+
+.form-control {
+    height: 40px;
+}
+
+.bg-field span.input-field input {
+    font-size: 16px;
+}
+
+.btn-blue {
+    padding: 8px 6px;
+    font-size: 14px;
+}
+
+.btn-sign-inup span {
+    font-size: 14px;
+}
+
+.fontgot-txt {
+    font-size: 14px;
+    font-family: 'open_sansregular';
+}
+	
+	 
+ }

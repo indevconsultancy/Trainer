@@ -1,0 +1,47 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "com.telerik.plugins.nativepagetransitions": {
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    },
+    "cordova-plugin-battery-status": {
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    },
+    "cordova-plugin-crop": {
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    },
+    "cordova-plugin-cryptography-aes": {
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    },
+    "cordova-plugin-iroot": {
+      "ENABLE_BUSYBOX_CHECK": "false",
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    },
+    "cordova.plugins.diagnostic": {
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-compat": {
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    }
+  }
+}

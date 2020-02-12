@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+		  <meta charset="utf-8">
+		  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <title>SBM Trainer</title>
+		  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		  <link rel="stylesheet" type="text/css" href="css/main.css">
+		  <link rel="stylesheet" type="text/css" href="css/media.css">
+		  <link rel="stylesheet" type="text/css" href="fonts/font.css">
+		  <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
+	</head>
+    <body>
+
+     <section id="slidebar" class="slidebar" style="display:none">
+        <div class="slidebar-box">
+           <div class="col-xs-12" style="padding:0px;">
+              <div class="profile-img">
+                 <span class="close-btn-menu"><img src="images/close-icon.png"></span>
+                 <img src="images/key-reource-logo.png">
+              </div>
+              <div class="slide-navigation">
+                 <span id='home_side_click'>Ongoing Training</span>
+                 <span id='scheduled_training'>Scheduled Training</span>
+                 <span id='completed_training'>Completed Training</span>
+                 <span id='logout_profile'>Logout</span>
+              </div>
+           </div>
+        </div>
+     </section>
+	
+		<!--Login screen-->
+		<section id='login' style='display:none;'>
+			 <div class='top-logo-fixed'><img src='images/logo-1.png'></div>
+			 <div class='container body-container blue-border-5'>
+				<div class='login-otp-container'>
+				   <div class='banner-login'>
+					  <img src='images/login-banner-1.jpg' class='banner-height'>
+				   </div>
+				   <div class='filed-area'>
+					  <div class='round-icon-mobile'><img src='images/login-round-icon.png'></div>
+					  <div class='form-group bg-field'>
+						 <span><img src='images/mobile-icon.png'></span>
+						 <span class='input-field'>
+						<input id='login_mobile_input' type='name' class='form-control' placeholder='User Name'></span>
+					  </div>
+					  <div class='form-group bg-field m-b-15'>
+						 <span><img src='images/pass-icon.png'></span>
+						 <span class='input-field'>
+							<input id='login_password_input' type='password' class='form-control' placeholder='Password'>
+						 <span class='show_password' id='show_login_password'>Show</span>
+						 <span class='show_password' id='hide_login_password' style='display:none'>Hide</span>
+						 </span>
+					  </div>
+					  <div class='btn-row'>
+						 <div class='btn-blue registerbtn m-t-15 align-center' id='login_submit'><span><img src='images/login-btn.png' class='pull-left'></span>Login</div>
+					  </div>
+					  
+				   </div>
+				</div>
+			 </div>
+        </section>
+		
+		<!--HOme screen-->
+	 	<section id="home_display" style="display:none">
+		   <div class="top-nav-fixed">
+		      <h1>
+		        <!--  <span class="back-arrow"><img src="images/back-white.png"></span> -->
+		         <span class="heading">Ongoing Training</span>
+		         <span class="menu menu-side-click"><img src="images/menu-burger.png"></span>
+		      </h1>
+		   </div>
+		   <div class="container body-container bottom-nav" id='home_page_content'>
+		      <!-- <div class="col-xs-12 main-area" >
+		         <div class="index-data">
+		            <div class="index-data-row">
+		               <h1><img src="images/current-training-icon.png">Current Training</h1>
+		               <p><img src="images/programname-icon.png">Program Name</p>
+		               <h2 id='program_name_homepage'></h2>
+		               <p><img src="images/krc-name-icon.png">KRC Name</p>
+		               <h3 id='program_address_homepage'></h3>
+		               <p><img src="images/date-icon.png">From Date</p>
+		               <h4 id='program_start_homepage'></h4>
+		               <p><img src="images/date-icon.png">To Date</p>
+		               <h4 id='program_end_homepage'></h4>
+		            </div>
+		            <p class="trainer-font"><img src="images/master-trainer-icon.png">Master Trainer</p>
+		            <div class="trainer-row" id='master_trainer'></div>
+		            <div id='otherTrainers'></div>
+				</div>
+		      </div> -->
+		   </div>
+		   <div class="bottomnav">
+		      <span class="class-1 schedule_click"><img src="images/schdule-icon.png">Scheduled</span>
+		      <span class="class-2 completed_click"><img src="images/complted-icon.png">Completed</span>
+		   </div>
+		   <div class="bottomnav logo_height">
+        <span class="footer_logos">
+            <div class="india"><img src="images/govt.png" class="govt_width" /></div>
+            <div class="india_2"><img src="images/spects.png" /></div>
+        </span>
+      </div>
+		</section>
+   
+   		<section id="Completed-Programs" style="display:none">
+		   <div class="top-nav-fixed">
+		      <h1>
+		         <span class="back-arrow" id='completed_back'><img src="images/back-white.png"></span>
+		         <span class="heading">Completed Programs</span>
+		         <span class="menu menu-side-click"><img src="images/menu-burger.png"></span>
+		      </h1>
+		   </div>
+		   <div class="container body-container bottom-nav">
+		      <div class="col-xs-12 main-area no-padd" id='completed_records'>
+		         <!-- <div class="completed-scheduled-row">
+		            <h1>TR18080001 <span><img src="images/location-map.png">Map</span></h1>
+		            <h2>Five days training on CLTS under SBM(G), Samba block of J&K </h2>
+		            <h3><img src="images/calender-icon.png">02 Aug 2018 - 04 Aug 2018</h3>
+		         </div> -->
+		      </div>
+		   </div>
+		   <div class="bottomnav">
+		      <span class="class-1 schedule_click"><img src="images/schdule-icon.png">Scheduled</span>
+		      <span class="class-2 completed_click"><img src="images/complted-icon.png">Completed</span>
+		   </div>
+		   <div class="bottomnav logo_height">
+        <span class="footer_logos">
+            <div class="india"><img src="images/govt.png" class="govt_width" /></div>
+            <div class="india_2"><img src="images/spects.png" /></div>
+        </span>
+      </div>
+		</section>
+
+
+		<section id="Scheduled-Programs" style="display:none">
+		   <div class="top-nav-fixed">
+		      <h1>
+		         <span class="back-arrow" id='scheduled_back'><img src="images/back-white.png"></span>
+		         <span class="heading">Scheduled Programs</span>
+		         <span class="menu menu-side-click"><img src="images/menu-burger.png"></span>
+		      </h1>
+		   </div>
+		   <div class="container body-container bottom-nav">
+		      <div class="col-xs-12 main-area no-padd" id='scheduled_records'>
+		        <!--  <div class="completed-scheduled-row">
+		            <h1>TR18080001 <span><img src="images/location-map.png">Map</span></h1>
+		            <h2>Five days training on CLTS under SBM(G), Samba block of J&K </h2>
+		            <h3><img src="images/calender-icon.png">02 Aug 2018 - 04 Aug 2018</h3>
+		         </div> -->
+		         
+		      </div>
+		   </div>
+		   <div class="bottomnav">
+		      <span class="class-1 schedule_click"><img src="images/schdule-icon.png">Scheduled</span>
+		      <span class="class-2 completed_click"><img src="images/complted-icon.png">Completed</span>
+		   </div>
+		   <div class="bottomnav logo_height">
+        <span class="footer_logos">
+            <div class="india"><img src="images/govt.png" class="govt_width" /></div>
+            <div class="india_2"><img src="images/spects.png" /></div>
+        </span>
+      </div>
+		</section>
+
+
+		    <section id="Current_Programme" style="display:none">
+		 	   <div class="top-nav-fixed">
+			      <h1>
+			        <!--  <span class="back-arrow"><img src="images/back-white.png"></span> -->
+			         <span class="heading">Current Program</span>
+			         <span class="menu menu-side-click"><img src="images/menu-burger.png"></span>
+			      </h1>
+			   </div>
+			   <div class="container body-container">
+			      <div class="col-xs-12 main-area no-padd bg-gray">
+			         <div class="prograame-row">
+			            <h1 id='current_program_trainingid'></h1>
+			            <h2 id='current_program_trainingname'></h2>
+			            <div class="enroll-data-row time">
+			               <span class="icon">
+			               		<img src="images/map-2.png">
+			               	</span>
+			               	<span id='current_program_loction'> 22 Aug 2018 </span>
+			            </div>
+			            <div class="enroll-data-row time">
+			               <span class="icon">
+			               		<img src="images/date.png">
+			               	</span>
+			               	<span id='current_program_startdate'> 22 Aug 2018 </span>
+			               	<span class="to new">To</span>
+			               	<span id='current_program_enddate'> 6 Aug 2018 </span>
+			               	<input type='hidden' id='iTrainingId_currentprogramme'>
+			               	<input type='hidden' id='iTrainingDate_currentprogramme'>
+			            </div>
+			         </div>
+			         <div id='current_batch_setup_for_offline'>
+			         </div>
+			         <div class="days-training" id='ongoing_batch_status' style='display: none'>
+					   <div class="card">
+					      <div class="days-count" id='ongoing_day_count' >Day 1 of 5</div>
+					      <div class="mark-attendence-check" id='ongoing_markattenedance'>
+					         <div class="white-transformbg" id='attendance_whiteform'></div>
+					         <img src="images/attendence-icon.png"><br>Mark Attendance
+					      </div>
+					      <div class="take-picture">
+					         <span class="pull-left" id='ongoing_take_selfi_one'>
+					            <div class="white-transformbg" id='selfi_one_whiteform'></div>
+					            <img src="images/attendence-icon.png"><br>Take a Selfie before start of the program
+					         </span>
+					         <span class="pull-right" id='ongoing_take_selfi_two'>
+					            <div class="white-transformbg" id='selfi_two_whiteform'></div>
+					            <img src="images/attendence-icon.png"><br><div id='current_program_last' data-check='not endday'>Take a Picture of the batch including you during the program</div>
+					         </span>
+					      </div>
+					      <div class="date" id='ongoing_date_display'></div>
+					   </div>
+					</div>
+			         <div id='current_batch_setup_for_dots'>
+			         </div>	
+			         
+			      </div>
+			   </div>
+			   <div class="bottomnav logo_height">
+        <span class="footer_logos">
+            <div class="india"><img src="images/govt.png" class="govt_width" /></div>
+            <div class="india_2"><img src="images/spects.png" /></div>
+        </span>
+      </div>
+			</section>
+
+		<div id='online-offline' class='popup-bg' style='display:none;'>
+		   <table cellpadding='0' cellspacing='0' border='0' height='100%' width='auto' align='center'>
+		      <tbody>
+		         <tr>
+		            <td width='100%' height='100%' align='center' valign='middle'>
+		               <div class="popup_close">
+		                    <div class="popup_position" id="close_online_cross">
+		                      <img src="images/cross_mark.png" alt="">
+		                    </div>
+	                   </div>
+		               <div class='trainee-feedback'>
+		                  <div class='rate-trainee no-padd'>
+		                     <h2>Please select the training program type</h2>
+		                     <div class='online-offline-row'>
+		                        <span class='width'>					
+			                        <label class='container'>Online
+				                        <input type='radio' name='radio' id='radio_1' value='Online'>
+				                        <span class='checkmark'></span>
+			                        </label>
+		                        </span>	
+		                        <span class='width'>	
+			                        <label class='container'>Offline
+				                        <input type='radio' name='radio' id='radio_2' value='Offline'>
+				                        <span class='checkmark'></span>
+			                        </label>
+		                        </span>	
+		                        <input type='hidden'  id='training_id_popup'>
+		                     </div>
+		                  </div>
+		                  <div class='btn-row'>
+		                     <div class='btn-blue registerbtn m-t-20 align-center'>
+		                        <span id='submit_course_mode'>
+		                        	<span><img src='images/otp-lock.png' class='pull-left'></span>
+		                        Submit</span>
+		                     </div>
+		                  </div>
+		                  <div class='btn-row' style='margin-top: 20px;background: #e3e3e3;'>
+		                    <p style='padding: 0px; margin: 5px; font-size: 12px; text-align: left;color: #ed7e22;width:94%;'>Instructions:</p>
+		                    <p style='padding: 0px; margin: 5px; font-size: 10px; text-align: left;width:94%;'>Once the submission is done you cannot change the program type</p>
+		                    <p style='padding: 0px; margin: 5px; font-size: 10px; text-align: left;'><span style='color: #ed7e22;font-size: 10px;width:94%;'>Online: </span>if all participants use <u>mobile</u> for having Pre-test,Post-test & Feedback</p>
+		                    <p style='padding: 0px; margin: 5px; font-size: 10px; text-align: left;width:94%;'><span style='color: #ed7e22;font-size: 10px;'>Offline: </span>if all participants use <u>paper</u> for having Pre-test,Post-test & Feedback</p>
+		                  </div>
+		                 <!--  <p>Once the submission is done you cannot change the program type.</p>
+		                  <p><span style='color:green; font-weight:700'>Online <span>Participants go through Pre-test, Post-test & Feedback on their Devices through KRC Trainee App. You can Approve Attendance, capture Pictures with participants & end the Training Program.</p>
+		                  <p><span style='color:red; font-weight:700'>Offline <span>You can enroll Participants, update Pre-test, Post-test score & Feedback of each Participant. Approve Attendance, capture Pictures with participants & end the Training Program..</p> -->
+		               </div>
+		            </td>
+		         </tr>
+		      </tbody>
+		   </table>
+		</div>
+
+		<section id="Attendence" style="display:none">
+		   <div class="top-nav-fixed">
+		      <h1>
+		         <span class="back-arrow" id='attendance_back' ><img src="images/back-white.png"></span>
+		         <span class="heading">Attendance</span>
+		         <span class="menu menu-side-click"><img src="images/menu-burger.png"></span>
+		      </h1>
+		   </div>
+		   <div class="container body-container bottom-nav btn markattendence">
+		   	<input type='hidden' id='itrainid_for_current_program'>
+		   	<input type='hidden' id='itrainid_date_current_program'>
+            <div class="col-xs-12 main-area no-padd" id='attendance_body'>
+               
+            </div>
+           <!--  <div class="bottomnav attendence-btn">
+	          
+	            <span class="select" ></span>
+	            <span class="marked" id='mark_attendence'>MARK ATTENDANCE</span>
+	        </div> -->
+
+         </div>
+         
+         <div class="bottomnav navfoot logo_height attendence-btn">
+		   	
+		   <div class="btn-row">
+		                <div class="btn-blue registerbtn btn-width align-center marked" id='mark_attendence'>MARK ATTENDANCE
+		                </div>
+		            </div>
+        <span class="footer_logos fixed">
+            <div class="india"><img src="images/govt.png" class="govt_width" /></div>
+            <div class="india_2"><img src="images/spects.png" /></div>
+        </span>
+      </div>
+		</section>
+ 		<!--ALL OFFLINE SCREENS-->
+ 		<section id="enroll_offline" style="display:none">
+		   <div class="top-nav-fixed">
+		      <h1>
+			     <span class="back-arrow" id='enrollment_back'><img src="images/back-white.png"></span>
+		         <span class="heading">Enroll Participants</span>
+				 <span class="menu menu-side-click" ><img src="images/menu-burger.png"></span>
+		      </h1>
+		   </div>
+		   <div class="container body-container blue-border-5 enroll-parti">
+		      <div class="col-xs-12 main-area">
+		         <div class="profile-mainbox">
+		            <div class="col-xs-12">
+		               <div class="profile-img-blk">
+							<img  id ='user_image_updated' src="images/profile-img.png">
+							<!-- <span id ='open_popup'><img src="images/add-icon.png"></span> -->
+					   </div>
+		            </div>
+		         </div>
+		         <div class="profile-data">
+		         	<input id='enroll_itrainingid' type="hidden"">
+		            <div class="form-group bg-field">
+		               <span><img src="images/profile-name-icon.png"></span>
+		               <span class="input-field"><input id='enroll_user_name' type="name" class="form-control" placeholder="Name"></span>
+		            </div>
+		            <div class="form-group bg-field">
+		               <span><img src="images/mobile-new-icon.png"></span>
+		               <span class="input-field"><input id='enroll_user_mobile' type="name" class="form-control" placeholder="Mobile Number"></span>
+		            </div>
+		            <div class="form-group bg-field">
+		               <span><img src="images/email-icon-enroll.png"></span>
+		               <span class="input-field"><input id='enroll_user_email' type="name" class="form-control" placeholder="Email Address"></span>
+		            </div>
+		           
+		            <div class="form-group bg-field">
+		               <span><img src="images/profle-designation-icon.png"></span>
+		               <span class="input-field">
+		               		
+		               	  <select id="enroll_user_organization">
+		                     <option value="SELECT DESIGNATION">Designation</option>
+		                  </select>
+		               </span>
+		            </div>
+		            <div class="form-group bg-field">
+		               <span><img src="images/profile-state-icon.png"></span>
+		               <span class="input-field">
+		                  <select id="listBox_state">
+		                     <option value="SELECT STATE">State</option>
+		                  </select>
+		               </span>
+		            </div>
+		            <div class="form-group bg-field">
+		               <span><img src="images/profile-district-icon.png"></span>
+		               <span class="input-field">
+		               	 	
+		                  <select id="listBox_city">
+		                     <option value="SELECT CITY">District</option>
+		                  </select>
+		               </span>
+		            </div>
+		        
+		           <!--  <div class="btn-row">
+		                <div class="btn-blue registerbtn m-t-10 align-center">
+		                   <span id='submit_enroll_user'><span><img src="images/otp-lock.png" class="pull-left"></span> Submit &amp; Add more</span>
+		                </div>
+		            </div> -->
+		         </div>
+		      </div>
+		   </div>
+		  <!--  <div class="bottomnav logo_height">
+        <span class="footer_logos">
+            <div class="india"><img src="images/govt.png" class="govt_width" /></div>
+            <div class="india_2"><img src="images/spects.png" /></div>
+        </span>
+      </div> -->
+       <div class="bottomnav navfoot logo_height attendence-btn">
+		   	
+		   <div class="btn-row">
+		                <div class="btn-blue registerbtn btn-width align-center marked" id='mark_attendence'> <span id='submit_enroll_user'><span><img src="images/otp-lock.png" class="pull-left"></span> Submit &amp; Add more</span>
+		                </div>
+		            </div>
+        <span class="footer_logos fixed">
+            <div class="india"><img src="images/govt.png" class="govt_width" /></div>
+            <div class="india_2"><img src="images/spects.png" /></div>
+        </span>
+      </div>
+		</section>
+
+		<section id="pretest_offline" style="display:none">
+		   <div class="top-nav-fixed">
+		      <h1>
+		         <span class="back-arrow" id='pre-test-back'><img src="images/back-white.png"></span>
+		         <span class="heading">Pre-Test Scores</span>
+		         <span class="menu menu-side-click"><img src="images/menu-burger.png"></span>
+		      </h1>
+		   </div>
+		   <div class="container body-container bottom-nav submit-score btn">
+		   	  <input type='hidden' id='pretest_itrainingid'>
+		      <div class="col-xs-12 main-area no-padd" id='pretest_listdisplay'>
+		      </div>
+
+		     
+		   </div>
+		   
+		   <div class="bottomnav navfoot logo_height">
+		   	<!--  <div
+		   	  class="attendence-btn submit-score-btn">
+		      <span class="marked" id='submit_pretest_score'>SUBMIT SCORES</span>
+		   </div> -->
+		   <div class="btn-row">
+		                <div class="btn-blue registerbtn btn-width align-center marked" id='submit_pretest_score'>
+		                  SUBMIT SCORES
+		                </div>
+		            </div>
+        <span class="footer_logos fixed">
+            <div class="india"><img src="images/govt.png" class="govt_width" /></div>
+            <div class="india_2"><img src="images/spects.png" /></div>
+        </span>
+      </div>
+
+		</section>
+
+		<section id="posttest_offline" style="display:none">
+		   <div class="top-nav-fixed">
+		      <h1>
+		         <span class="back-arrow" id='post-test-back' ><img src="images/back-white.png"></span>
+		         <span class="heading">Post-Test &amp; Feedback</span>
+		         <span class="menu menu-side-click"><img src="images/menu-burger.png"></span>
+		      </h1>
+		   </div>
+		   <div class="container body-container bottom-nav btn submit-score">
+		   	  <input type='hidden' id='posttest_itrainingid'>
+		      <div class="col-xs-12 main-area no-padd" id='posttest_listdisplay'>
+		      </div>
+		   </div>
+		   <!-- <div class="bottomnav attendence-btn submit-score-btn">
+		      <span class="marked" id='submit_posttest_score'>SUBMIT SCORES</span>
+		   </div> -->
+		    <div class="bottomnav navfoot logo_height">
+		   	
+		   <div class="btn-row">
+		                <div class="btn-blue registerbtn btn-width align-center marked" id='submit_posttest_score'>SUBMIT SCORES
+		                </div>
+		            </div>
+        <span class="footer_logos fixed">
+            <div class="india"><img src="images/govt.png" class="govt_width" /></div>
+            <div class="india_2"><img src="images/spects.png" /></div>
+        </span>
+      </div>
+		</section>
+
+		<div id='feedback_popup' class='popup-bg' style='display:none'>
+	       <table cellpadding='0' cellspacing='0' border='0' height='100%' width='auto' align='center'>
+	          <tbody>
+	             <tr>
+	                <td width='100%' height='100%' align='center' valign='middle'>
+	                  	<div class="popup_close">
+		                    <div class="popup_position" id='close_feedback_cross'>
+		                      <img src="images/cross_mark.png" alt="" />
+		                    </div>
+	                    </div>
+	                   <div class='trainee-feedback'>
+	                      <div class='rate-learning'>
+	                         <h1>How do you rate this learning Program</h1>
+	                         <p>
+	                            <i id = 'lp1' class='fa fa-star-o lpstar' aria-hidden='true'></i>
+	                            <i id = 'lp2' class='fa fa-star-o lpstar' aria-hidden='true'></i>
+	                            <i id = 'lp3' class='fa fa-star-o lpstar' aria-hidden='true'></i>
+	                            <i id = 'lp4' class='fa fa-star-o lpstar' aria-hidden='true'></i>
+	                            <i id = 'lp5' class='fa fa-star-o lpstar' aria-hidden='true'></i>
+	                         </p>
+	                      </div>
+	                      <div class='rate-trainee'>
+	                         <h1>How do you rate the Trainer</h1>
+	                         <p>
+	                            <i id='rt1' class='fa fa-star-o rtstar' aria-hidden='true'></i>
+	                            <i id='rt2' class='fa fa-star-o rtstar' aria-hidden='true'></i>
+	                            <i id='rt3' class='fa fa-star-o rtstar' aria-hidden='true'></i>
+	                            <i id='rt4' class='fa fa-star-o rtstar' aria-hidden='true'></i>
+	                            <i id='rt5' class='fa fa-star-o rtstar' aria-hidden='true'></i>
+	                         </p>
+	                      </div>
+	                      <div class='btn-row'>
+	                         <div class='btn-blue registerbtn m-t-20 align-center'>
+	                           <span id='submit_feedback'> <span><img src='images/otp-lock.png' class='pull-left'></span>
+	                            Submit</span>
+	                         </div>
+	                         <div class="btn-blue registerbtn m-t-20 align-center">
+	                              <span id='close_feedback_button'><img src="images/cross_mark.png" class="pull-left"></span>
+	                              Cancel
+	                        </div>
+	                      </div>
+	                      <p>Tap the number of stars you would
+	                         give us on a scale from 1-5.
+	                      </p>
+	                   </div>
+	                </td>
+	             </tr>
+	          </tbody>
+	       </table>
+	    </div>
+  
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="cordova.js"></script>
+	<script src="cordova_plugins.js"></script> 
+	<!-- <script type="text/javascript" charset="utf-8" src="js/SQLitePlugin.js"></script> -->
+	<script src="js/bootstrap.js"></script>
+	<script src="js/url-config.js"></script> 	
+    <script src="js/index.js"></script>
+    <script src="js/loginmodule.js"></script>
+    <script src="js/schedules.js"></script>
+    <script src="js/attendance.js"></script>
+     <script src="js/offline.js"></script>
+      <script src="js/webSqlSync.js" type="application/x-javascript" charset="utf-8"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+
+    <!-- <script src="js/enrollModule.js"></script>
+    <script src="js/profile.js"></script> -->
+	</body>
+</html>

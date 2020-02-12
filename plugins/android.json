@@ -1,0 +1,84 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-battery-status": {
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    },
+    "cordova-plugin-media-capture": {
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    },
+    "cordova-plugin-globalization": {
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    },
+    "cordova-plugin-vibration": {
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    },
+    "com.telerik.plugins.nativepagetransitions": {
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    },
+    "cordova-plugin-spinner": {
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    },
+    "cordova-plugin-crop": {
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    },
+    "cordova-plugin-keyboard": {
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    },
+    "cordova-sqlite-storage": {
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    },
+    "cordova-plugin-cryptography-aes": {
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    },
+    "cordova-plugin-iroot": {
+      "ENABLE_BUSYBOX_CHECK": "true",
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    },
+    "cordova.plugins.diagnostic": {
+      "ANDROID_SUPPORT_VERSION": "28.+",
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.sbmg.krctrainer"
+    }
+  }
+}

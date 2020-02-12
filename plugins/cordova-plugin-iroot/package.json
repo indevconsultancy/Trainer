@@ -1,0 +1,76 @@
+{
+  "_from": "cordova-plugin-iroot",
+  "_id": "cordova-plugin-iroot@0.8.0",
+  "_inBundle": false,
+  "_integrity": "sha512-HHgAR2Q4aBELBA2JX1xTEFCcVGACTZtJeda0GMlQVo1otItR73hGBvEN71j0uU35HfP5xu/pyWsq9wla9OWHCQ==",
+  "_location": "/cordova-plugin-iroot",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-iroot",
+    "name": "cordova-plugin-iroot",
+    "escapedName": "cordova-plugin-iroot",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-iroot/-/cordova-plugin-iroot-0.8.0.tgz",
+  "_shasum": "f992d7cf284837bc0c70ebb65a938c8b9272f2a1",
+  "_spec": "cordova-plugin-iroot",
+  "_where": "D:\\Avinash\\wetransfer-ccaecf (1)\\KRC_TRAINER\\KRC_TRAINER",
+  "author": {
+    "name": "Wuglyak Bolgoink",
+    "url": "info@cyberkatze.de"
+  },
+  "bugs": {
+    "url": "https://github.com/WuglyakBolgoink/cordova-plugin-iroot/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-iroot",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "deprecated": false,
+  "description": "Cordova Jailbreak/Root Detection Plugin for Apache Cordova",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=6.0.0"
+    }
+  ],
+  "homepage": "https://github.com/WuglyakBolgoink/cordova-plugin-iroot#readme",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova",
+    "jailbreak",
+    "jailbroken",
+    "cydia",
+    "detection",
+    "detector",
+    "root",
+    "rooted",
+    "rootBeer",
+    "android",
+    "ios",
+    "iroot",
+    "plugin"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-iroot",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WuglyakBolgoink/cordova-plugin-iroot.git"
+  },
+  "types": "./types/index.d.ts",
+  "version": "0.8.0"
+}

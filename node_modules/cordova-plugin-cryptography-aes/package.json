@@ -1,0 +1,65 @@
+{
+  "_from": "cordova-plugin-cryptography-aes",
+  "_id": "cordova-plugin-cryptography-aes@1.0.7",
+  "_inBundle": false,
+  "_integrity": "sha1-rFQ11FcfCRUBQqDREOh2G9RfJ7s=",
+  "_location": "/cordova-plugin-cryptography-aes",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-cryptography-aes",
+    "name": "cordova-plugin-cryptography-aes",
+    "escapedName": "cordova-plugin-cryptography-aes",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-cryptography-aes/-/cordova-plugin-cryptography-aes-1.0.7.tgz",
+  "_shasum": "ac5435d4571f09150142a0d110e8761bd45f27bb",
+  "_spec": "cordova-plugin-cryptography-aes",
+  "_where": "D:\\Avinash\\wetransfer-ccaecf (1)\\KRC_TRAINER\\KRC_TRAINER",
+  "author": {
+    "name": "Gilang Al Khansa"
+  },
+  "bugs": {
+    "url": "https://github.com/gilangdipper/Plugin-Cordova-CryptographyAES/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-cryptography-aes",
+    "platforms": [
+      "android"
+    ]
+  },
+  "deprecated": false,
+  "description": "Get functionality from AES algorithm on Java",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=4.0.0"
+    },
+    {
+      "name": "cordova-android",
+      "version": ">=4.0.2"
+    }
+  ],
+  "homepage": "https://github.com/gilangdipper/Plugin-Cordova-CryptographyAES#readme",
+  "keywords": [
+    "Cryptography",
+    "ecosystem:cordova",
+    "cordova-android",
+    "aes"
+  ],
+  "license": "Apache 2.0 License",
+  "name": "cordova-plugin-cryptography-aes",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gilangdipper/Plugin-Cordova-CryptographyAES.git"
+  },
+  "version": "1.0.7"
+}
